@@ -3,30 +3,20 @@ title: Primeira pergunta
 tags:
   - set
   - object
+  - spread
 order: 2
 date: '2019-09-27'
 answers:
-  - 'oneObject.key.key2.feito // correct'
-  - 'oneObject['valor2']'
-  - 'oneObject.feito'
-  - 'oneObject.key2.feito' 
+  - '[{a: 1}, {a: 1}] // correct'
+  - '[{a: 1}]'
 ---
 
-Como acessar 'valor2' ?
+Consider the following `Set` of objects spread into a new array. What gets logged?
 
 ```javascript
-const oneObject = {
-  chave0: 'valor0',
-  chave1: 'valor1',
-  key: {
-    key1: 'value1'
-    key2 : {
-      chave : 'valor',
-      feito : 'valor2'
-    }
-  }
-};
-
+const mySet = new Set([{ a: 1 }, { a: 1 }]);
+const result = [...mySet];
+console.log(result);
 ```
 
 <!-- explanation -->
